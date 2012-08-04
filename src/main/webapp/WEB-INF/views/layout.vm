@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Code Review Tool</title>
+        <link href="#springUrl('/resources/css/layout.css')" rel="stylesheet" type="text/css" media="screen">
+    </head>
+    <body>
+        <div>
+            <a href="#springUrl('/index.html')">Index</a>
+            <a href="#springUrl('/commits.html')">Commits</a>
+        </div>
+        <div>
+            $screen_content
+        </div>
+        <div>
+            ##parse ("footer.vm")
+        </div>
+    </body>
+</html>
