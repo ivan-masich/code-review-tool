@@ -13,6 +13,12 @@
 
     <context:component-scan base-package="com.github.mindblowing.codereviewtool"/>
 
+    <context:property-placeholder location="classpath:git.properties"/>
+
+    <bean id="gitFolder" class="java.lang.String">
+        <constructor-arg value="${git.folder}"/>
+    </bean>
+
     <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
         <property name="resourceLoaderPath" value="/WEB-INF/views/"/>
     </bean>
@@ -20,6 +26,7 @@
     <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityLayoutView" />
         <property name="layoutUrl" value="layout.vm" />
+        <property name="dateToolAttribute" value="dateTool"/>
         <property name="prefix" value=""/>
         <property name="suffix" value=".vm"/>
     </bean>

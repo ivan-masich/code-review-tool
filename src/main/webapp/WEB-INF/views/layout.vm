@@ -6,7 +6,7 @@
     </head>
     <body>
         <div>
-            <a href="#springUrl('/index.html')">Index</a>
+            <a href="#springUrl('/index.html')">Index</a> |
             <a href="#springUrl('/commits.html')">Commits</a>
         </div>
         <div>

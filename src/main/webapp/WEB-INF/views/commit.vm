@@ -1,0 +1,26 @@
+<p>
+    <b>Message:</b> $commit.ShortMessage <br />
+    <b>CommitTime:</b> $commit.CommitTime <br />
+    <b>AuthorIdent:</b> $commit.AuthorIdent <br />
+</p>
+
+<p>
+    #foreach($diffEntry in $diffEntries)
+        <b>$diffEntry.ChangeType</b>
+
+        #if($diffEntry.ChangeType == 'ADD')
+            $diffEntry.NewPath
+        #end
+        #if($diffEntry.ChangeType == 'COPY' || $diffEntry.ChangeType == 'RENAME')
+            $diffEntry.OldPath -> $diffEntry.NewPath
+        #end
+        #if($diffEntry.ChangeType == 'DELETE' || $diffEntry.ChangeType == 'MODIFY')
+            $diffEntry.OldPath
+        #end
+
+        <br />
+    #end
+</p>
+
+<b>Detail diff info:</b>
+<pre>$out</pre>

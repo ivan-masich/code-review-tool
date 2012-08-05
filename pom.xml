@@ -9,7 +9,15 @@
 
     <properties>
         <org.springframework.version>3.1.2.RELEASE</org.springframework.version>
+        <settingsProfileId>code-review-tool</settingsProfileId>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>jgit-repository</id>
+            <url>http://download.eclipse.org/jgit/maven</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!--  Spring -->
@@ -35,8 +43,21 @@
             <artifactId>velocity-tools</artifactId>
             <version>2.0</version>
         </dependency>
+
+        <!-- JGit -->
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>2.0.0.201206130900-r</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 </project>
