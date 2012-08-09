@@ -7,7 +7,8 @@
     <body>
         <div>
             <a href="#springUrl('/index.html')">Index</a> |
-            <a href="#springUrl('/commits.html')">Commits</a>
+            <a href="#springUrl('/git/commits.html')">Git commits</a> |
+            <a href="#springUrl('/svn/commits.html')">Svn commits</a>
         </div>
         <div>
             $screen_content

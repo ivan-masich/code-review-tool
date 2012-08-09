@@ -1,6 +1,6 @@
 #foreach($logItem in $log)
     <p>
-        <a href="#springUrl("/commit/${logItem.Name}.html")">$logItem.ShortMessage</a><br />
+        <a href="#springUrl("/git/commit/${logItem.Name}.html")">$logItem.ShortMessage</a><br />
         <b>CommitTime:</b> $logItem.CommitTime <br />
         <b>AuthorIdent:</b> $logItem.AuthorIdent <br />
     </p>
