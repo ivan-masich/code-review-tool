@@ -1,4 +1,4 @@
-/*
+package com.github.mindblowing.codereviewtool;/*
 * ====================================================================
 * Copyright (c) 2004-2011 TMate Software Ltd.  All rights reserved.
 *
